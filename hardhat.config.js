@@ -5,7 +5,13 @@ require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
 require("dotenv").config();
 
-const { API_URL, PRIVATE_KEY } = process.env;
+require("./scripts/deploy");
+require("./scripts/initialize");
+require("./scripts/verify");
+require("./scripts/grant-roles");
+
+const { ALCHEMY_RINKEBY_API_URL, DEPLOYER_PRIVATE_KEY, ETHERSCAN_API_KEY } =
+  process.env;
 
 module.exports = {
   solidity: {
@@ -13,15 +19,11 @@ module.exports = {
   },
   networks: {
     rinkeby: {
-      url: API_URL,
-      accounts: [`0x${PRIVATE_KEY}`],
+      url: ALCHEMY_RINKEBY_API_URL,
+      accounts: [DEPLOYER_PRIVATE_KEY],
     },
   },
   etherscan: {
-    apiKey: {
-      mainnet: "7H149Y186N8389C3U4BY3Q2GT5IAYS4RNM",
-      ropsten: "7H149Y186N8389C3U4BY3Q2GT5IAYS4RNM",
-      rinkeby: "7H149Y186N8389C3U4BY3Q2GT5IAYS4RNM",
-    },
+    apiKey: ETHERSCAN_API_KEY,
   },
 };
