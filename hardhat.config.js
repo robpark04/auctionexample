@@ -8,7 +8,6 @@ require("dotenv").config();
 require("./scripts/deploy");
 require("./scripts/initialize");
 require("./scripts/verify");
-require("./scripts/grant-roles");
 
 const { ALCHEMY_RINKEBY_API_URL, DEPLOYER_PRIVATE_KEY, ETHERSCAN_API_KEY } =
   process.env;

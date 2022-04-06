@@ -1300,6 +1300,78 @@
       "artifacts": [
         "IBaseToken"
       ]
+    },
+    "C:\\work\\soundmint contracts for rinkeby\\contracts\\interfaces\\IMinter.sol": {
+      "lastModificationDate": 1649271076301,
+      "contentHash": "b490cb9aad8f24a52143781bd8c5a0ef",
+      "sourceName": "contracts/interfaces/IMinter.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.10"
+      ],
+      "artifacts": [
+        "IMinter"
+      ]
+    },
+    "C:\\work\\soundmint contracts for rinkeby\\contracts\\mocks\\MintTwiceInBlock.sol": {
+      "lastModificationDate": 1649271046245,
+      "contentHash": "839d38cfc5845e221789eb98859598a7",
+      "sourceName": "contracts/mocks/MintTwiceInBlock.sol",
+      "solcConfig": {
+        "version": "0.8.10",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IMinter.sol"
+      ],
+      "versionPragmas": [
+        "0.8.10"
+      ],
+      "artifacts": [
+        "MintTwiceInBlock"
+      ]
     }
   }
 }
